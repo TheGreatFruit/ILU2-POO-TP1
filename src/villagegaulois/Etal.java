@@ -23,6 +23,7 @@ public class Etal {
 		this.quantite = quantite;
 		quantiteDebutMarche = quantite;
 		etalOccupe = true;
+		
 	}
 
 	public String libererEtal() {
@@ -32,7 +33,7 @@ public class Etal {
 		int produitVendu = quantiteDebutMarche - quantite;
 		if (produitVendu > 0) {
 			chaine.append(
-					"il a vendu " + produitVendu + " parmi " + produit + ".\n");
+					"il a vendu " + produitVendu + " " + produit + " parmi les " + quantiteDebutMarche + " qu'il voulait vendre.\n");
 		} else {
 			chaine.append("il n'a malheureusement rien vendu.\n");
 		}
@@ -44,7 +45,7 @@ public class Etal {
 			return "L'étal de " + vendeur.getNom() + " est garni de " + quantite
 					+ " " + produit + "\n";
 		}
-		return "L'étal est libre";
+		return "L'étal est libre\n";
 	}
 
 	public String acheterProduit(int quantiteAcheter, Gaulois acheteur) {
