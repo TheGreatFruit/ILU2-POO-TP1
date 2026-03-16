@@ -62,6 +62,10 @@ public class Etal {
 			StringBuilder chaine = new StringBuilder();
 			chaine.append(acheteur.getNom() + " veut acheter " + quantiteAcheter
 					+ " " + produit + " à " + vendeur.getNom());
+			if (quantiteAcheter < 1){
+				throw new IllegalArgumentException("La quantité à acheter doit être supérieure à 0.");
+			}
+			
 			if (quantite == 0) {
 				chaine.append(", malheureusement il n'y en a plus !");
 				quantiteAcheter = 0;
