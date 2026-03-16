@@ -46,6 +46,7 @@ public class Etal {
 			System.out.println("Il n'y a pas de vendeur sur cet étal.");
 			e.printStackTrace();
 		}
+		return ""; 
 	}
 
 	public String afficherEtal() {
