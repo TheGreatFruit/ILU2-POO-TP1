@@ -130,7 +130,9 @@ public class Village {
 		}
 
 		private void utiliserEtal(int indiceEtal, Gaulois vendeur, String produit, int nbProduit){
-			etals[indiceEtal].occuperEtal(vendeur, produit, nbProduit);
+			if(indiceEtal >= 0 && indiceEtal <= etals.length()) {
+				etals[indiceEtal].occuperEtal(vendeur, produit, nbProduit);
+			}
 		}
 		
 		private int trouverEtalLibre(){
