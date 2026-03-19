@@ -24,7 +24,6 @@ public class ScenarioCasDegrade {
 			//etal.acheterProduit(1, bonemine);
 			etal.acheterProduit(0, bonemine);
 		}catch(IllegalArgumentException | IllegalStateException e) {
-			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		
@@ -32,7 +31,6 @@ public class ScenarioCasDegrade {
 		try {
 			village.afficherVillageois();
 		}catch (VillageSansChefException e) {
-			System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
 		
